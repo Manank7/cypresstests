@@ -1,0 +1,28 @@
+{
+  "name": "cypresstests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:headed": "cypress run --headed",
+    "cypress:run:chrome": "cypress run --browser chrome",
+    "cypress:run:firefox": "cypress run --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manank7/cypresstests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manank7/cypresstests/issues"
+  },
+  "homepage": "https://github.com/Manank7/cypresstests#readme",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.5.2"
+  }
+}
