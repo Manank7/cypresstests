@@ -5,6 +5,7 @@ describe("Interactions and verifications on Dropdowns", () => {
 
   it("should select the dropdown and verify the results", () => {
     cy.get("#country").select("Germany").should("have.value", "germany");
+    cy.get("#country").select("India").should("have.value", "india");
   });
 
   it("should select multiple options in the multi select list", () => {
