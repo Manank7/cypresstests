@@ -65,7 +65,7 @@ jobs:
       - name: Run Forms tests
         run: npm run test:forms
         env:
-          CYPRESS_BASE_URL: ("https://testautomationpractice.blogspot.com/" || null)
+          CYPRESS_BASE_URL: ""
 
       - name: Upload screenshots on failure
         uses: actions/upload-artifact@v4
@@ -103,7 +103,7 @@ jobs:
       - name: Run UI tests
         run: npm run test:ui
         env:
-          CYPRESS_BASE_URL: ("https://testautomationpractice.blogspot.com/" || null)
+          CYPRESS_BASE_URL: ""
 
       - name: Upload screenshots on failure
         uses: actions/upload-artifact@v4
