@@ -7,7 +7,9 @@ module.exports = defineConfig({
     },
     specPattern: "cypress/e2e/**/*.spec.js",
     // Remove baseUrl for API tests that don't need a local server
-    // baseUrl: process.env.CYPRESS_BASE_URL || "http://localhost:3000",
+    baseUrl:
+      process.env.CYPRESS_BASE_URL ||
+      "https://testautomationpractice.blogspot.com/",
     video: true,
     screenshotOnRunFailure: true,
     trashAssetsBeforeRuns: true,
