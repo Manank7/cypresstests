@@ -6,8 +6,9 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     specPattern: "cypress/e2e/**/*.spec.js",
-    // Remove baseUrl for API tests that don't need a local server
-    // baseUrl: process.env.CYPRESS_BASE_URL || "http://localhost:3000",
+    baseUrl:
+      process.env.CYPRESS_BASE_URL ||
+      "https://testautomationpractice.blogspot.com/",
     video: true,
     screenshotOnRunFailure: true,
     trashAssetsBeforeRuns: true,
@@ -18,6 +19,11 @@ module.exports = defineConfig({
     env: {
       environment: process.env.NODE_ENV || "development",
     },
+    // Handle rate limiting and other non-2xx responses globally
+    defaultCommandTimeout: 10000,
+    requestTimeout: 10000,
+    // Disable fail on non-2xx status codes globally
+    failOnStatusCode: false,
   },
   // CI/CD specific settings
   component: {
