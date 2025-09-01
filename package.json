@@ -8,7 +8,13 @@
     "cypress:run": "cypress run",
     "cypress:run:headed": "cypress run --headed",
     "cypress:run:chrome": "cypress run --browser chrome",
-    "cypress:run:firefox": "cypress run --browser firefox"
+    "cypress:run:firefox": "cypress run --browser firefox",
+    "test:api": "cypress run --spec 'cypress/e2e/api-tests/**/*.spec.js'",
+    "test:forms": "cypress run --spec 'cypress/e2e/forms/**/*.spec.js'",
+    "test:ui": "cypress run --spec 'cypress/e2e/ui/**/*.spec.js'",
+    "test:all": "npm run test:api && npm run test:forms && npm run test:ui",
+    "test:parallel": "cypress run --parallel --record --key YOUR_CYPRESS_KEY",
+    "test:ci": "cypress run --headless --browser chrome"
   },
   "repository": {
     "type": "git",
